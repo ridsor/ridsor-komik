@@ -1,0 +1,36 @@
+main {
+  width: 80%;
+  margin: 2rem auto;
+  color: #ccc;
+}
+
+.headhome > article {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  margin-bottom: 1rem;
+}
+
+.headhome h1 {
+  display: inline-block;
+  font-size: 20px;
+  background-color: #171717;
+  padding: 0.7rem;
+  margin: 0.9rem 0 0 0.6rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.headhome .informasi {
+  font-size: 13px;
+  background-color: #171717;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.6rem 0.7rem;
+}
+
+@media (max-width: 1024px) {
+  main {
+    width: calc(100% - 1.5rem);
+  }
+}
