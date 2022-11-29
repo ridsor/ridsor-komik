@@ -98,11 +98,11 @@ $komiks = $komiks['komik'];
                   <div class="berwarna"><i class="bi bi-palette-fill"></i> WARNA</div>
                   <?php endif; ?>
                   <?php if($komik['type-komik'] == 'manga'): ?>
-                    <span class="type-komik"><img src="./public/assets/img/bendera/japan.svg" alt="" /></span>
-                    <?php elseif($komik['type-komik'] == 'manhwa'): ?>
-                      <span class="type-komik"><img src="./public/assets/img/bendera/korsel.svg" alt="" /></span>
-                      <?php elseif($komik['type-komik'] == 'manhua'): ?>
-                        <span class="type-komik"><img src="./public/assets/img/bendera/china.svg" alt="" /></span>
+                  <span class="type-komik"><img src="./public/assets/img/bendera/japan.svg" alt="" /></span>
+                  <?php elseif($komik['type-komik'] == 'manhwa'): ?>
+                  <span class="type-komik"><img src="./public/assets/img/bendera/korsel.svg" alt="" /></span>
+                  <?php elseif($komik['type-komik'] == 'manhua'): ?>
+                  <span class="type-komik"><img src="./public/assets/img/bendera/china.svg" alt="" /></span>
                   <?php endif; ?>
                 </div>
                 <h4 class="title"><a href=""><?= $komik['judul'] ?></a></h4>
@@ -112,18 +112,6 @@ $komiks = $komiks['komik'];
                 </div>
               </div>
               <?php endforeach; ?>
-              <!-- <div class="komik-post">
-                <div class="image">
-                  <img src="https://cdn.kena-blok.xyz/uploads/2022/10/Komik-Yeol-ae-Haejwoyo.jpg?width=146&height=208" alt="" />
-                  <div class="berwarna"><i class="bi bi-palette-fill"></i> WARNA</div>
-                  <span class="type-komik"><img src="./public/assets/img/bendera/japan.svg" alt="" /></span>
-                </div>
-                <h4 class="title"><a href="">Monster</a></h4>
-                <div class="info-chapter">
-                  <a href="" class="chapter">Ch. 51</a>
-                  <span class="datech">14 min lalu</span>
-                </div>
-              </div> -->
             </div>
           </article>
         </section>
@@ -131,49 +119,6 @@ $komiks = $komiks['komik'];
       <aside></aside>
     </main>
     <footer></footer>
-    <script>
-      const datech = document.querySelectorAll('.datech');
-      for(const item of datech) {
-        const now = Date.now();
-        const dateChapter = item.dataset.datech;
-        let date = now - dateChapter;
-        date = date / 1000;
-        if(date > 60) {
-          date = date / 60;
-          if(date > 60) {
-            date = date / 60;
-            if(date > 24) {
-              date = date / 24;
-              if(date > 30) {
-                date = date / 30;
-                if(date > 12) {
-                  date = date / 12;
-                  date = Math.round(date);
-                  date = date + ' thn lalu';
-                } else {
-                  date = Math.round(date);
-                  date = date + ' bln lalu';
-                }
-              } else {
-                date = Math.round(date);
-                date = date + ' hari lalu';
-              }
-            } else {
-              date = Math.round(date);
-              date = date + ' jam lalu';
-            }
-          } else {
-            date = Math.round(date);
-            date = date + ' min lalu';
-          }
-        } else {
-          date = Math.round(date);
-          date = date + ' detik lalu';
-        }
-        
-
-        item.innerText = date;
-      }
-    </script>
+    <script src="./public/assets/js/script.js"></script>
   </body>
 </html>
