@@ -1,0 +1,100 @@
+{
+  "komik": [
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/11/Komik-The-Villainess-Is-Me.jpg?width=146&height=208",
+      "type-komik": "manga",
+      "warna": false,
+      "judul": "Owari no Seraph",
+      "chapters": 111,
+      "datech": 1669104376831
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/10/Komik-Yeol-ae-Haejwoyo.jpg?width=146&height=208",
+      "type-komik": "manhwa",
+      "warna": true,
+      "judul": "Monster",
+      "chapters": 10,
+      "datech": 1669104827411
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/10/Komik-Assassin-Cinderella.png?width=146&height=208",
+      "type-komik": "manhua",
+      "warna": true,
+      "judul": "Prince Hero",
+      "chapters": 52,
+      "datech": 1669104371773
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/11/Komik-Autumn-is-The-Best-Time-to-Ask-Someone-Out-scaled.jpg?width=146&height=208",
+      "type-komik": "manhwa",
+      "warna": true,
+      "judul": "Top 1%",
+      "chapters": 9,
+      "datech": 1669104477137
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/11/Komik-Closed-Room-Mafia.jpg?width=146&height=208",
+      "type-komik": "manhwa",
+      "warna": true,
+      "judul": "Closed Room Mafia",
+      "chapters": 8,
+      "datech": 1669686971223
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/02/Komik-Dungeon-Busters.jpg?width=146&height=208",
+      "type-komik": "manga",
+      "warna": false,
+      "judul": "Dungeon Busters",
+      "chapters": 6,
+      "datech": 1669687024585
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/11/Komik-The-Villainess-Is-Me.jpg?width=146&height=208",
+      "type-komik": "manga",
+      "warna": false,
+      "judul": "Owari no Seraph",
+      "chapters": 111,
+      "datech": 1669104376831
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/10/Komik-Yeol-ae-Haejwoyo.jpg?width=146&height=208",
+      "type-komik": "manhwa",
+      "warna": true,
+      "judul": "Monster",
+      "chapters": 10,
+      "datech": 1669104827411
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/10/Komik-Assassin-Cinderella.png?width=146&height=208",
+      "type-komik": "manhua",
+      "warna": true,
+      "judul": "Prince Hero",
+      "chapters": 52,
+      "datech": 1669104371773
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/11/Komik-Autumn-is-The-Best-Time-to-Ask-Someone-Out-scaled.jpg?width=146&height=208",
+      "type-komik": "manhwa",
+      "warna": true,
+      "judul": "Top 1%",
+      "chapters": 9,
+      "datech": 1669104477137
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/11/Komik-Closed-Room-Mafia.jpg?width=146&height=208",
+      "type-komik": "manhwa",
+      "warna": true,
+      "judul": "Closed Room Mafia",
+      "chapters": 8,
+      "datech": 1669686971223
+    },
+    {
+      "image": "https://cdn.kena-blok.xyz/uploads/2022/02/Komik-Dungeon-Busters.jpg?width=146&height=208",
+      "type-komik": "manga",
+      "warna": false,
+      "judul": "Dungeon Busters",
+      "chapters": 6,
+      "datech": 1669687024585
+    }
+  ]
+}

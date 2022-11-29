@@ -1,3 +1,9 @@
+<?php 
+$data = file_get_contents('./json/komik.json');
+$komiks = json_decode($data, true);
+$komiks = $komiks['komik'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,11 +13,11 @@
     <title>Komik</title>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="./assets/css/config.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/header.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/aside.css" />
+    <link rel="stylesheet" href="./public/assets/css/config.css" />
+    <link rel="stylesheet" href="./public/assets/css/header.css" />
+    <link rel="stylesheet" href="./public/assets/css/main.css" />
+    <link rel="stylesheet" href="./public/assets/css/footer.css" />
+    <link rel="stylesheet" href="./public/assets/css/aside.css" />
   </head>
   <body>
     <header>
@@ -84,16 +90,40 @@
           <article>
             <h2 class="title">Update Chapter Komik Terbaru</h2>
             <div class="container">
+              <?php foreach($komiks as $komik) : ?>
               <div class="komik-post">
+                <div class="image">
+                  <img src="<?= $komik['image'] ?>" alt="" />
+                  <?php if($komik['warna']) : ?>
+                  <div class="berwarna"><i class="bi bi-palette-fill"></i> WARNA</div>
+                  <?php endif; ?>
+                  <?php if($komik['type-komik'] == 'manga'): ?>
+                    <span class="type-komik"><img src="./public/assets/img/bendera/japan.svg" alt="" /></span>
+                    <?php elseif($komik['type-komik'] == 'manhwa'): ?>
+                      <span class="type-komik"><img src="./public/assets/img/bendera/korsel.svg" alt="" /></span>
+                      <?php elseif($komik['type-komik'] == 'manhua'): ?>
+                        <span class="type-komik"><img src="./public/assets/img/bendera/china.svg" alt="" /></span>
+                  <?php endif; ?>
+                </div>
+                <h4 class="title"><a href=""><?= $komik['judul'] ?></a></h4>
+                <div class="info-chapter">
+                  <a href="" class="chapter">Ch. <?= $komik['chapters'] ?></a>
+                  <span class="datech" data-datech="<?= $komik['datech'] ?>"></span>
+                </div>
+              </div>
+              <?php endforeach; ?>
+              <!-- <div class="komik-post">
                 <div class="image">
                   <img src="https://cdn.kena-blok.xyz/uploads/2022/10/Komik-Yeol-ae-Haejwoyo.jpg?width=146&height=208" alt="" />
                   <div class="berwarna"><i class="bi bi-palette-fill"></i> WARNA</div>
-                  <span class="type-komik"><img src="./assets/bendera/japan.svg" alt="" /></span>
+                  <span class="type-komik"><img src="./public/assets/img/bendera/japan.svg" alt="" /></span>
                 </div>
                 <h4 class="title"><a href="">Monster</a></h4>
-                <a href="" class="chapter">Ch. 51</a>
-                <span class="datech">14 min lalu</span>
-              </div>
+                <div class="info-chapter">
+                  <a href="" class="chapter">Ch. 51</a>
+                  <span class="datech">14 min lalu</span>
+                </div>
+              </div> -->
             </div>
           </article>
         </section>
@@ -101,5 +131,49 @@
       <aside></aside>
     </main>
     <footer></footer>
+    <script>
+      const datech = document.querySelectorAll('.datech');
+      for(const item of datech) {
+        const now = Date.now();
+        const dateChapter = item.dataset.datech;
+        let date = now - dateChapter;
+        date = date / 1000;
+        if(date > 60) {
+          date = date / 60;
+          if(date > 60) {
+            date = date / 60;
+            if(date > 24) {
+              date = date / 24;
+              if(date > 30) {
+                date = date / 30;
+                if(date > 12) {
+                  date = date / 12;
+                  date = Math.round(date);
+                  date = date + ' thn lalu';
+                } else {
+                  date = Math.round(date);
+                  date = date + ' bln lalu';
+                }
+              } else {
+                date = Math.round(date);
+                date = date + ' hari lalu';
+              }
+            } else {
+              date = Math.round(date);
+              date = date + ' jam lalu';
+            }
+          } else {
+            date = Math.round(date);
+            date = date + ' min lalu';
+          }
+        } else {
+          date = Math.round(date);
+          date = date + ' detik lalu';
+        }
+        
+
+        item.innerText = date;
+      }
+    </script>
   </body>
 </html>

@@ -100,15 +100,19 @@ main {
   color: #ccc;
 }
 
-.komik-post > .chapter {
+.komik-post > .info-chapter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.komik-post .info-chapter > .chapter {
   color: #007aff;
 }
 
-.komik-post > .datech {
+.komik-post .info-chapter > .datech {
   color: #666;
   font-size: 11px;
   display: inline-block;
-  transform: translate(100%, 0);
 }
 
 .komik-post > .title,
