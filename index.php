@@ -118,7 +118,15 @@ $komiks = $komiks['komik'];
       </div>
       <aside></aside>
     </main>
-    <footer></footer>
+    <footer>
+      <ul class="menu-footer">
+        <li><a href="">Beranda</a></li>
+        <li><a href="">Komik Dewasa</a></li>
+        <li><a href="">DMCA</a></li>
+        <li><a href="">Komikcast</a></li>
+      </ul>
+      <div class="copyright">&copy; 2022 by <strong>Komik</strong>. All Rights Reserved.</div>
+    </footer>
     <script src="./public/assets/js/script.js"></script>
   </body>
 </html>
