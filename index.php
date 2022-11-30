@@ -97,12 +97,12 @@ $komiks = $komiks['komik'];
                   <?php if($komik['warna']) : ?>
                   <div class="berwarna"><i class="bi bi-palette-fill"></i> WARNA</div>
                   <?php endif; ?>
-                  <?php if($komik['type-komik'] == 'manga'): ?>
-                  <span class="type-komik"><img src="./public/assets/img/bendera/japan.svg" alt="" /></span>
-                  <?php elseif($komik['type-komik'] == 'manhwa'): ?>
-                  <span class="type-komik"><img src="./public/assets/img/bendera/korsel.svg" alt="" /></span>
-                  <?php elseif($komik['type-komik'] == 'manhua'): ?>
-                  <span class="type-komik"><img src="./public/assets/img/bendera/china.svg" alt="" /></span>
+                  <?php if($komik['typeKomik'] == 'manga'): ?>
+                  <span class="typeKomik"><img src="./public/assets/img/bendera/japan.svg" alt="" /></span>
+                  <?php elseif($komik['typeKomik'] == 'manhwa'): ?>
+                  <span class="typeKomik"><img src="./public/assets/img/bendera/korsel.svg" alt="" /></span>
+                  <?php elseif($komik['typeKomik'] == 'manhua'): ?>
+                  <span class="typeKomik"><img src="./public/assets/img/bendera/china.svg" alt="" /></span>
                   <?php endif; ?>
                 </div>
                 <h4 class="title"><a href=""><?= $komik['judul'] ?></a></h4>
